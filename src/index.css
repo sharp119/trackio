@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.mobile-toggle-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle-button {
+    display: block;
+    cursor: pointer;
+  }
+
+  .fixed-sidebar {
+    transform: translateX(0);
+  }
+
+  .fixed-sidebar-closed {
+    transform: translateX(-100%);
+  }
+}
